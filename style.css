@@ -1,110 +1,87 @@
-:root {
-  --text: #222;
-  --muted: #666;
-  --rule: #ddd;
-  --accent: #4f6b34;        /* darker shade of the sage green used for links in the paper */
-  --accent-hover: #34481f;
-}
-
-* { box-sizing: border-box; }
-
-html { font-size: 17px; }
-
 body {
-  margin: 0;
-  color: var(--text);
-  background: #fff;
-  font-family: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text", Cambria, Georgia, serif;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-
-main {
-  max-width: 42rem;
   margin: 0 auto;
-  padding: 4.5rem 1.5rem 3rem;
+  max-width: 47rem;
+  padding: 3.5rem 1.75rem 4rem;
+  color: #1b1b1b;
+  background: #fdfdfc;
+  font-family: "Source Serif 4", Charter, Georgia, serif;
+  font-size: 18px;
+  line-height: 1.55;
 }
 
 a {
-  color: var(--accent);
+  color: #1f4e8c;
   text-decoration: none;
 }
 a:hover {
-  color: var(--accent-hover);
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
-/* header */
-h1 {
-  margin: 0 0 0.35rem;
-  font-size: 2.1rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+/* header: name and affiliation on the left, contact on the right */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid #cfcfcf;
 }
-.position {
-  margin: 0 0 0.6rem;
-  color: var(--muted);
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.15rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+header p {
+  margin: 0;
   line-height: 1.45;
 }
-.links { margin: 0; }
-.sep {
-  margin: 0 0.45em;
-  color: #aaa;
+.contact {
+  text-align: right;
 }
 
-/* sections */
-section { margin-top: 2.6rem; }
-.about { margin-top: 2rem; }
-.about p { margin: 0 0 0.8rem; }
-.label { font-weight: 600; }
+main {
+  padding-top: 1.6rem;
+}
+main > p {
+  margin: 0;
+}
 
 h2 {
-  margin: 0 0 1.1rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid var(--rule);
-  font-size: 0.82rem;
+  margin: 2.6rem 0 1rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent);
 }
 
-/* paper entry */
-.paper h3 {
-  margin: 0 0 0.2rem;
-  font-size: 1.12rem;
+.paper .title {
+  margin: 0;
   font-weight: 600;
-  line-height: 1.35;
 }
-.paper h3 a { color: var(--text); }
-.paper h3 a:hover { color: var(--accent); }
-
-.paper-links {
-  margin: 0 0 0.5rem;
-  font-size: 0.92rem;
+.paper .links {
+  margin: 0.15rem 0 0.7rem;
 }
-
-details { font-size: 0.95rem; }
-summary {
-  cursor: pointer;
-  color: var(--muted);
-  font-size: 0.92rem;
-  width: max-content;
+.paper .abstract {
+  margin: 0;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  color: #333;
 }
-summary:hover { color: var(--text); }
-details p {
-  margin: 0.5rem 0 0;
+.runin {
+  font-style: italic;
 }
 
-/* footer */
-footer {
-  margin-top: 4rem;
-  font-size: 0.8rem;
-  color: #999;
-}
-
-@media (max-width: 540px) {
-  html { font-size: 16px; }
-  main { padding-top: 2.5rem; }
+@media (max-width: 600px) {
+  body {
+    font-size: 17px;
+    padding-top: 2.2rem;
+  }
+  header {
+    display: block;
+  }
+  .contact {
+    text-align: left;
+    margin-top: 0.9rem;
+  }
 }
