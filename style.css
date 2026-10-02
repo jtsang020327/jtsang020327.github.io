@@ -1,0 +1,110 @@
+:root {
+  --text: #222;
+  --muted: #666;
+  --rule: #ddd;
+  --accent: #4f6b34;        /* darker shade of the sage green used for links in the paper */
+  --accent-hover: #34481f;
+}
+
+* { box-sizing: border-box; }
+
+html { font-size: 17px; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #fff;
+  font-family: Charter, "Bitstream Charter", "Iowan Old Style", "Sitka Text", Cambria, Georgia, serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem 3rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* header */
+h1 {
+  margin: 0 0 0.35rem;
+  font-size: 2.1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.position {
+  margin: 0 0 0.6rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+.links { margin: 0; }
+.sep {
+  margin: 0 0.45em;
+  color: #aaa;
+}
+
+/* sections */
+section { margin-top: 2.6rem; }
+.about { margin-top: 2rem; }
+.about p { margin: 0 0 0.8rem; }
+.label { font-weight: 600; }
+
+h2 {
+  margin: 0 0 1.1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* paper entry */
+.paper h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.12rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.paper h3 a { color: var(--text); }
+.paper h3 a:hover { color: var(--accent); }
+
+.paper-links {
+  margin: 0 0 0.5rem;
+  font-size: 0.92rem;
+}
+
+details { font-size: 0.95rem; }
+summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.92rem;
+  width: max-content;
+}
+summary:hover { color: var(--text); }
+details p {
+  margin: 0.5rem 0 0;
+}
+
+/* footer */
+footer {
+  margin-top: 4rem;
+  font-size: 0.8rem;
+  color: #999;
+}
+
+@media (max-width: 540px) {
+  html { font-size: 16px; }
+  main { padding-top: 2.5rem; }
+}
